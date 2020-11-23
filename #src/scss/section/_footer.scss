@@ -1,0 +1,78 @@
+.footer {
+  width: 100%;
+  background-color: $primary;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid #172146;
+  }
+
+}
+
+//footerbar
+.footerbar {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  //Logo
+  &__age {
+    margin-top: 40px;
+  }
+
+  //nav
+  &__nav {
+    flex: 0 0 45%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+  }
+
+  &__sub-list {
+    margin-top: 20px;
+  }
+
+  &__sub-item {
+    margin-top: 10px;
+  }
+
+  &__link {
+    @include font(1.6rem, 400, 1.6rem, $tertiary);
+  }
+
+  
+
+  //text
+  .footerbar__text {
+    flex: 0 0 30%;
+    @include font(1.4rem, 500, 1.5rem, $white);
+  }
+
+  .footerbar__titel {
+    @include font(1.8rem, 700, 1.9rem, $white);
+    margin-bottom: 30px;
+  }
+
+}
+
+//description
+.description {
+  width: 65%;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  @include font(1.0rem, 500, 1.5rem, $white);
+
+  &__span {
+    display: block;
+  }
+
+  &__link {
+    color: #00FFD1;
+  }
+}

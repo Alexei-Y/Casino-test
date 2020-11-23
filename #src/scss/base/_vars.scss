@@ -1,0 +1,34 @@
+//color
+$primary: #121423;
+$secondary: #87E389;
+$tertiary: #32448C;
+$white: #FFFFFF;
+$text-blue: #8C91BA;
+$s5-winning: #20263E;
+
+//back
+%background {
+  background: linear-gradient(289.68deg, #121726 57%, #222C42 91%);
+}
+
+//input
+%input {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 1px solid $tertiary;
+  border-radius: 17px;
+  background-color: transparent;
+  color: $text-blue;
+
+  &::placeholder {
+    color: $text-blue;
+  }
+}
+
+// MIXIN
+@mixin font ($fz, $fw, $lh, $cl) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $cl;
+}

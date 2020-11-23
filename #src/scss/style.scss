@@ -1,0 +1,51 @@
+@import 'base/null';
+@import 'base/vars';
+
+/*MAIN CLASS LIST*/
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  font-weight: 400;    
+  line-height: 1.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  @extend %background;
+}
+
+.container {
+  max-width: 1420px;//2x padding = 20px
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 10px 24px;
+  border: 1px solid $secondary;
+  border-radius: 100px;
+  background-color: $secondary;    
+  @include font(1.6rem, 700, 1.7rem, #000);           
+}
+
+.titel {
+  @include font(2.4rem, 700, 2.6rem, $white);
+}
+
+.titel_3 {
+  @include font(1.4rem, 400, 1.6rem, $text-blue);
+}
+
+
+
+@import 'section/header';
+@import 'section/s1-hero';
+@import 'section/s2-category';
+@import 'section/s3-providers';
+@import 'section/s4-new-games';
+@import 'section/s5-winning';
+@import 'section/s6-popular';
+@import 'section/s7-recommends';
+@import 'section/s8-infobar';
+@import 'section/s9-pay';
+@import 'section/s10-partners';
+@import 'section/footer';

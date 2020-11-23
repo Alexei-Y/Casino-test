@@ -1,0 +1,22 @@
+/* PARTNERS */
+.partners {
+  width: 100%;
+  background-color: $primary;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px 0;
+  }
+
+  &__item {
+    margin-top: 10px;
+  }
+
+  //last element
+  &__item:not(:nth-child(10n)) {
+    margin-right: 55px;
+  }
+
+}

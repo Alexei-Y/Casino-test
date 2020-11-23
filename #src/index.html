@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Casino test</title>
+  <!-- Useful meta tags -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="some description">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+  <body>
+    
+    @@include("sections/_header.html")
+    
+    <main class="main">
+
+      @@include("sections/_s1_hero.html")
+
+      @@include("sections/_s2_category.html")
+
+      @@include("sections/_s3_providers.html")
+
+      @@include("sections/_s4_new-games.html")
+
+      @@include("sections/_s5_winning.html")
+
+      <div class="wrapper__games">
+        @@include("sections/_s6_popular.html")
+
+        @@include("sections/_s7_recommends.html")
+
+        @@include("sections/_s8_infobar.html")
+
+        @@include("sections/_s9_pay.html")
+      </div>
+
+      @@include("sections/_s10_partners.html")
+
+    </main>
+
+    @@include("sections/_footer.html")
+
+    <script defer src="js/script.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,359 @@
+/* S1_HERO */
+.hero {
+  width: 100%;
+  @extend %background;
+  overflow: hidden;
+
+  &__body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  //stone
+  &__stone-1 {
+    height: 170px;
+    width: 170px;
+    top: -70px;
+    left: -120px;
+    position: absolute;
+    background-image: url(../img/s1_hero/back/stone_1.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    filter: drop-shadow(0px 4px 24px rgba(136, 80, 255, 0.6));
+  }
+
+  &__stone-2 {
+    height: 200px;
+    width: 200px;
+    bottom: 20px;
+    left: 230px;
+    position: absolute;
+    background-image: url(../img/s1_hero/back/stone_2.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    filter: drop-shadow(0px 4px 24px rgba(136, 80, 255, 0.6));
+  }
+
+}
+
+/* CHECK-IN */
+.check-in {
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  //body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  //titel
+  &__titel {
+    text-align: center;
+  }
+}
+
+//social
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //description
+  &__description {
+    margin-top: 15px;
+
+    &-sub {
+      margin-top: 5px;
+    }
+  }
+
+  //list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  //item
+  &__item {
+    height: 34px;
+    width: 34px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  //link
+  &__link {
+    display: inline-block;
+    height: 34px;
+    width: 34px;
+  }
+
+}
+
+//form
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  //email
+  &__email {
+    @extend %input;
+  }
+
+  //password-currency block
+  &__pc-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__password {
+    flex: 0 0 67%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend %input;
+
+    //password
+    &-text,
+    &-btn {
+      border: none;
+      outline: none;// Need :hover / :active
+      background-color: transparent;
+    }
+
+    &-text::placeholder {
+      color: $text-blue;
+    }
+
+    &-btn {
+      padding: 0;
+      height: 20px;
+      width: 20px;
+    }
+
+  }
+
+  //currency
+  &__currency {
+    flex: 0 0 30%;
+    @extend %input;
+    appearance: none;
+    background: url(../img/s1_hero/back/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: calc(100% - 8px);
+  }
+
+  //promo
+  &__promo {
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend %input;
+
+    &-text {
+      border: none;
+      outline: none;// Need :hover / :active
+      background-color: transparent;
+      color: $text-blue;
+    }
+
+    &-text::placeholder {
+      color: $text-blue;
+    }
+  }
+
+  // checkbox
+  &__checkbox {
+    display: flex;
+    flex-direction: column;
+
+    &-ipt {
+      display: none;
+      opacity: 0;
+    }
+
+    //customization
+    &-ipt:checked + &-text::before {
+      background-image: url(../img/s1_hero/back/done.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 10px;
+    }
+
+    &-text {
+      position: relative;
+      padding-left: 25px;
+      margin-top: 15px;
+      cursor: pointer;
+      user-select: none;
+
+      & a {
+        text-decoration: underline;
+      }
+
+      //customization
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 5px;
+        height: 15px;
+        width: 15px;
+        border: 1px solid $text-blue;
+        border-radius: 4px;
+        background: $white;
+      }
+
+    }
+
+  }
+
+  //buttons
+  &__buttons {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 25px;
+  }
+
+  //have account
+  &__haveacc {
+    margin-top: 5px;
+    @include font(1.2rem, 400, 1.4rem, $text-blue);
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+  }
+
+}
+
+/*BANNER*/
+.swiper {
+
+  &-container {
+    flex: 0 0 65%;
+    height: 500px;
+    margin-right: 0;
+    margin-left: 0;
+    box-shadow: 0 0 25px 7px rgba(0,0,0,.6);
+  }
+
+  &-slide {
+    background-image: url(../img/s1_hero/content/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+  }
+  
+  //pagination
+  &-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    &-bullet {
+      flex: 0 0 24%;
+      height: 5px;
+      border-radius: 50px;
+      background-color: $text-blue;
+
+      &-active {
+        background-color: $secondary;
+      }
+    }
+
+  }
+
+  //buttons
+  &-button-next,
+  &-button-prev {
+    top: 25%;
+    left: 70px;
+    height: 33px;
+    width: 33px;
+    border: 1px solid #595959;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &-button-next {
+    left: 120px;
+    transform: rotate(180deg);
+  }
+}
+
+/*SWIPPER-CONTENT*/
+.banner {
+
+  &__content {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 70px;
+    background: linear-gradient(90deg, #000000 -84.31%, rgba(0, 0, 0, 0) 81.86%);
+  }
+
+  //subtitel 
+  &__subtitel {
+    margin-top: 40px;
+    font-weight: 500;
+    color: $secondary;
+    text-transform: uppercase;
+  }
+
+  //titel
+  &__titel {
+    position: relative;
+    margin-top: 20px;
+    @include font(3.6rem, 700, 3.8rem, $white);
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      height: 2px;
+      width: 115px;
+      background-color: #fff;
+    }
+  }
+
+  //description
+  &__description {
+    margin-top: 30px;
+    @include font(1.4rem, 400, 1.8rem, $white);
+  }
+
+  //button
+  &__btn {
+    width: 100px;
+    margin-top: 20px;
+    padding: 5px 12px;
+  }
+
+}

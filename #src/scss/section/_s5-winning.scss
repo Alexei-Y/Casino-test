@@ -1,0 +1,92 @@
+/* S5-WINNING */
+.winning {
+  width: 100%;
+  background-color: $s5-winning;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+
+  //list
+  &__list {
+    flex: 0 0 87%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__img {
+    position: relative;
+    height: 70px;
+    width: 70px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    & img {
+      height: 70px;
+      width: 70px;
+      margin-right: 7px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  //INFO
+  &__info {
+    position: relative;
+  }
+
+  &__name {
+    @include font(1.4rem, 500, 1.6rem, $white);
+  }
+
+  &__game {
+    margin-top: 2px;
+    @include font(1.4rem, 400, 1.6rem, $secondary);
+    text-decoration: underline;
+  }
+
+  &__pay {
+    margin-top: 2px;
+    @include font(1.6rem, 600, 1.8rem, $white);
+  }
+
+    //blur first
+  &__item:first-child &__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: inset 20px 0px 25px 0px $s5-winning;
+  }
+
+   //blur last
+  &__item:last-child &__info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 70px;
+    box-shadow: inset -20px 0px 25px 0px $s5-winning;
+  }
+
+  
+
+}

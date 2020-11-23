@@ -1,0 +1,89 @@
+/* HEADER */
+.header {
+  width: 100%;
+  position: relative;//fix box-shadow
+  background-color: $primary;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+}
+
+// MENU
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__search {
+    height: 20px;
+    margin-right: 45px;
+  }
+
+  &__btn {
+    height: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    @include font(1.8rem, bold, 2.2rem, $white);
+  }
+
+  &__list &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+//LOGO
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__svg {
+    margin-right: 5px;
+    height: 40px;
+    width: 40px;
+  }
+
+  &__titel {
+    @include font(2rem, 700, 2.4rem, $white);
+    text-transform: uppercase;
+  }
+}
+
+// GETSTART
+.getstart {
+  display: flex;
+  align-items: center;
+
+  &__deposit {
+    margin-right: 15px;
+  }
+
+  &__login {
+    color: $white;
+    border: 1px solid $white;
+    background-color: transparent;
+  }
+
+  &__svg {
+    width: 10px;
+    height: 13px;
+  }
+}

@@ -1,0 +1,142 @@
+.wrapper__games {
+  @extend %background;
+}
+
+/* S4-NEW-GAMES */
+.newgames {
+  width: 100%;
+  padding: 50px 0;
+  @extend %background;
+
+}
+
+/* GAMEBAR */
+.gamebar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 30px -10px 0;
+
+  //titel
+  &__titel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  &__viewall {
+    @include font(1.8rem, 500, 2.1rem, $secondary);
+  }
+
+  //small
+  &__small {
+    flex: 0 1 66.6%;
+    padding: 0 10px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  &__item {
+    flex: 0 0 25%;
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+    padding: 0 5px;
+    max-height: 188px;
+
+    & img {
+      //adaptive img
+      height: 100%;
+      width: 100%;
+      max-height: 172px;
+      object-fit: cover;
+      border-radius: 17px;
+    }
+  }
+
+  //big
+  &__big {
+    position: relative;
+    flex: 0 1 33.3%;
+    display: flex;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  &__banner {
+    height: 100%;
+    width: 100%;
+
+    & img {
+      //adaptive img
+      height: 100%;
+      width: 100%;
+      max-height: 354px;
+      object-fit: cover;
+      border-radius: 17px;
+    }
+
+    &__green {
+      border-radius: 17px;
+      box-shadow: 0px 0px 10px 4px #8BEB01;
+    }
+
+    &__blue {
+      border-radius: 17px;
+      box-shadow: 0px 0px 10px 4px #4F00F7;
+    }
+
+    &__cyan {
+      border-radius: 17px;
+      box-shadow: 0px 0px 10px 4px #50FFE0;
+    }
+  }
+
+  &__box {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  //btn
+  &__btn {
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  //plus
+  &__plus {
+    padding: 3px 5px 3px 15px;
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    cursor: pointer;
+    color: $white;
+    background-image: url(../img/s4_newgames/back/plus.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  
+  }
+
+}

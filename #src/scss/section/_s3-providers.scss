@@ -1,0 +1,64 @@
+/* PROVIDERS*/
+.providers {
+  width: 100%;
+  padding: 10px 0 20px;
+  background-color: $primary;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  //list
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 15px;
+  }
+
+  &__link {
+    margin-top: 0;
+    padding: 5px 10px;
+    @extend %input;
+    border: 1px solid #282F4B;
+    @include font(1.2rem, 400, 1.5rem, $text-blue);
+
+    &__active {
+      @include font(1.4rem, 500, 1.6rem, $white);
+    }
+  }
+}
+
+/* BUTTONS BOX */
+.button__box {
+  position: fixed;
+  right: 130px;
+  max-width: 50px;
+}
+
+.button__circle {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $tertiary;
+  border: none;
+
+  &:last-child {
+    margin-top: 15px;
+  }
+}
+
+.button__flag svg,
+.button__chat svg {
+  height: 26px;
+  width: 26px;
+}

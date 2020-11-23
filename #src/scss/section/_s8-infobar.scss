@@ -1,0 +1,189 @@
+/* INFOBAR */
+.infobar {
+  width: 100%;
+  padding-top: 50px;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+//game of mounth
+.game-mounth {
+  flex: 0 1 38.3%;
+  position: relative;
+
+  &__titel {
+    text-align: center;
+    @include font(1.8rem, 700, 2.0rem, $white);
+  }
+
+  //image
+  & img {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    max-height: 330px;
+    object-fit: cover;
+  }
+
+  //info
+  &__info {
+    width: 65%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -20%);
+  }
+
+  //description
+  &__description {
+    text-align: center;
+    @include font(1.8rem, 400, 2.0rem, $white);
+  }
+
+  &__game {
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  //game-mounth__btn
+  &__btn {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: 1px solid $white;
+    border-radius: 15px;
+    background: transparent;
+    @include font(1.8rem, 500, 1.9rem, $white);
+  }      
+
+}
+
+
+//add
+.add {
+  flex: 0 1 23.3%;
+  margin-top: 30px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $s5-winning;
+  box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
+
+  //row
+  &__row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 50px;
+    
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+    
+    &:first-child::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      width: 100%;
+      height: 1px;
+      background-color: #282F4B;
+    }
+
+    &:last-child::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -15px;
+      width: 100%;
+      height: 1px;
+      background-color: #282F4B;
+    }
+  }
+
+  //card
+  &__card {
+    height: 75px;
+    width: 75px;
+    margin-right: 25px;
+  }
+
+  //text
+  &__text {
+    @include font(1.6rem, 500, 1.6rem, $white);
+  }
+
+  &__titel {
+    @include font(4.6rem, 700, 4.6rem, $secondary);
+  }
+
+
+}
+
+.big-wins {
+  flex: 0 1 38.3%;
+
+  &__titel {
+    text-align: center;
+    @include font(1.8rem, 700, 2.0rem, $white);
+  }
+
+  //table
+  &__table {
+    margin-top: 20px;
+    max-height: 330px;
+  }  
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 50px;
+    @include font(1.4rem, 500, 1.5rem, $text-blue);
+    background: #222C42;
+
+    & span {
+      flex: 0 0 25%;
+      text-align: center;
+    }                                  
+  }
+
+  //row
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 50px;
+    @include font(1.4rem, 400, 1.5rem, $white);
+
+    & span {
+      flex: 0 0 25%;
+      text-align: center;
+    }
+
+    &:nth-child(2n){
+      background: #182237;
+    }
+
+    &:nth-child(2n-1){
+      background: #222C42;
+    }
+  }
+
+  &__game {
+    text-decoration: underline;
+  }
+
+  &__points {
+    font-weight: 700;
+  }
+}

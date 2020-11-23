@@ -1,0 +1,73 @@
+/* S2-CATEGORY */
+.category {
+  width: 100%;
+  padding: 10px 0;
+  background-color: $primary;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*Category list*/
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin-right: 35px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include font(1.4rem, 500, 1.6rem, $white);
+  }
+
+  &__link svg {
+    margin-right: 10px;
+  }
+
+  /*Category select*/
+  &__select {
+    padding-right: 12px;
+    border: none;
+    appearance: none;
+    background-color: transparent;
+    background: url(../img/s2_category/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    @include font(1.4rem, 500, 1.6rem, $white);
+    cursor: pointer;
+  }
+
+  /* Category search */
+  &__form {
+    flex: 0 0 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 5px 10px;
+    @extend %input;
+  }
+
+  &__search {
+    flex: 0 1 90%;
+    border: none; //add hover or focus etc
+    outline: none;
+    background-color: transparent;
+    color: $text-blue;
+
+    &::placeholder {
+      color: $text-blue;
+    }
+  }
+
+}
