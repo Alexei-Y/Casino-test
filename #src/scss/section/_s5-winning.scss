@@ -26,8 +26,18 @@
 
   &__img {
     position: relative;
+  }
+
+  //blur first
+  &__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 70px;
     width: 70px;
+    border-radius: 50%;
+    box-shadow: inset 20px 0px 25px 0px $s5-winning;
   }
 
   &__link {
@@ -64,18 +74,6 @@
     @include font(1.6rem, 600, 1.8rem, $white);
   }
 
-    //blur first
-  &__item:first-child &__img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    box-shadow: inset 20px 0px 25px 0px $s5-winning;
-  }
-
    //blur last
   &__item:last-child &__info::before {
     content: "";
@@ -86,7 +84,5 @@
     width: 70px;
     box-shadow: inset -20px 0px 25px 0px $s5-winning;
   }
-
-  
 
 }

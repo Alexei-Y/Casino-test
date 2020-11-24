@@ -34,31 +34,3 @@
     }
   }
 }
-
-/* BUTTONS BOX */
-.button__box {
-  position: fixed;
-  right: 130px;
-  max-width: 50px;
-}
-
-.button__circle {
-  height: 48px;
-  width: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: $tertiary;
-  border: none;
-
-  &:last-child {
-    margin-top: 15px;
-  }
-}
-
-.button__flag svg,
-.button__chat svg {
-  height: 26px;
-  width: 26px;
-}

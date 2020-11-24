@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 1420px;//2x padding = 20px
+  max-width: 1420px;
   margin: 0 auto;
 }
 
@@ -35,8 +35,6 @@ body {
   @include font(1.4rem, 400, 1.6rem, $text-blue);
 }
 
-
-
 @import 'section/header';
 @import 'section/s1-hero';
 @import 'section/s2-category';
@@ -48,4 +46,6 @@ body {
 @import 'section/s8-infobar';
 @import 'section/s9-pay';
 @import 'section/s10-partners';
+@import 'section/s11-button';
 @import 'section/footer';
+@import 'section/media';

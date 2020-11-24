@@ -1,0 +1,30 @@
+/* BUTTONS BOX */
+.button__box {
+  position: fixed;
+  right: 5%;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 110px;
+  z-index: 15;
+}
+
+.button__circle {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $tertiary;
+  border: none;
+}
+
+.button__flag svg,
+.button__chat svg {
+  height: 26px;
+  width: 26px;
+}
+

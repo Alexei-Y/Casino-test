@@ -14,20 +14,20 @@
 
   /*Category list*/
   &__list {
+    flex: 1 0 75%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   &__item {
-    margin-right: 35px;
+    margin-right: 30px;
   }
 
   &__link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include font(1.4rem, 500, 1.6rem, $white);
+    @include font(1.4rem, 500, 1.5rem, $white);
   }
 
   &__link svg {
