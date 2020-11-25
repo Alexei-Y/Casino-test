@@ -25,6 +25,9 @@ $s5-winning: #20263E;
   }
 }
 
+//transition
+$trans: .3s;
+
 // MIXIN
 @mixin font ($fz, $fw, $lh, $cl) {
   font-size: $fz;

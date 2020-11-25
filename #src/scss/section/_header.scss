@@ -43,6 +43,26 @@
 
   &__link {
     @include font(1.8rem, bold, 2.2rem, $white);
+    position: relative;
+
+    &:hover::before {
+      width: 100%;
+      transition: width .3s ease;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -3px;
+      height: 1px;
+      width: 0;
+      background-color: $secondary;
+      transition: width .3s ease;
+
+    }
   }
 
   &__list &__item:not(:last-child) {
